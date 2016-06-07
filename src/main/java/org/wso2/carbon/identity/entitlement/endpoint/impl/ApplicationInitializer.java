@@ -48,11 +48,12 @@ public class ApplicationInitializer implements ServletContextListener {
             initEntitlementAuthenticatorRegistry();
 
             //initialize identity scim manager
-            IdentitySCIMManager.getInstance();
+            //nope no need to initialize a SCIM manager
+            //IdentitySCIMManager.getInstance();
 
-        } catch (CharonException e) {
-            logger.error("Error in initializing the IdentitySCIMManager at the initialization of " +
-                    "SCIM webapp", e);
+        } catch (Exception e) {
+            logger.error("Error in initializing the Authentocators at the initialization of " +
+                    "Entitlement webapp", e);
         }
     }
 
