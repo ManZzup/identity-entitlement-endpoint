@@ -20,8 +20,8 @@ package org.wso2.carbon.identity.entitlement.endpoint.impl;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.wso2.carbon.identity.entitlement.endpoint.auth.SCIMAuthenticationHandler;
-import org.wso2.carbon.identity.entitlement.endpoint.auth.SCIMAuthenticatorRegistry;
+import org.wso2.carbon.identity.entitlement.endpoint.auth.EntitlementAuthenticationHandler;
+import org.wso2.carbon.identity.entitlement.endpoint.auth.EntitlementAuthenticatorRegistry;
 import org.wso2.carbon.identity.entitlement.endpoint.auth.BasicAuthHandler;
 import org.wso2.carbon.identity.entitlement.endpoint.auth.OAuthHandler;
 import org.wso2.carbon.identity.entitlement.endpoint.auth.SCIMAuthConfigReader;
@@ -62,26 +62,26 @@ public class ApplicationInitializer implements ServletContextListener {
     }
 
     private void initSCIMAuthenticatorRegistry() {
-        SCIMAuthenticatorRegistry scimAuthRegistry = SCIMAuthenticatorRegistry.getInstance();
-        if (scimAuthRegistry != null) {
+        EntitlementAuthenticatorRegistry entitlementAuthRegistry = EntitlementAuthenticatorRegistry.getInstance();
+        if (entitlementAuthRegistry != null) {
             //set authenticators after building auth config
             SCIMAuthConfigReader configReader = new SCIMAuthConfigReader();
-            List<SCIMAuthenticationHandler> SCIMAuthenticators = configReader.buildSCIMAuthenticators();
+            List<EntitlementAuthenticationHandler> SCIMAuthenticators = configReader.buildSCIMAuthenticators();
             if (SCIMAuthenticators != null && !SCIMAuthenticators.isEmpty()) {
-                for (SCIMAuthenticationHandler scimAuthenticator : SCIMAuthenticators) {
-                    scimAuthRegistry.setAuthenticator(scimAuthenticator);
+                for (EntitlementAuthenticationHandler scimAuthenticator : SCIMAuthenticators) {
+                    entitlementAuthRegistry.setAuthenticator(scimAuthenticator);
                 }
 
             } else {
                 //initialize default basic auth authenticator & OAuth authenticator and set it in the auth registry.
                 BasicAuthHandler basicAuthHandler = new BasicAuthHandler();
                 basicAuthHandler.setDefaultPriority();
-                scimAuthRegistry.setAuthenticator(basicAuthHandler);
+                entitlementAuthRegistry.setAuthenticator(basicAuthHandler);
 
                 OAuthHandler oauthHandler = new OAuthHandler();
                 oauthHandler.setDefaultPriority();
                 oauthHandler.setDefaultAuthzServer();
-                scimAuthRegistry.setAuthenticator(oauthHandler);
+                entitlementAuthRegistry.setAuthenticator(oauthHandler);
             }
         }
     }

@@ -37,7 +37,7 @@ public class SCIMAuthConfigReader {
 
     private static Log logger = LogFactory.getLog(SCIMAuthConfigReader.class);
 
-    public List<SCIMAuthenticationHandler> buildSCIMAuthenticators() {
+    public List<EntitlementAuthenticationHandler> buildSCIMAuthenticators() {
 
         IdentityConfigParser identityConfig = IdentityConfigParser.getInstance();
         try {
@@ -49,7 +49,7 @@ public class SCIMAuthConfigReader {
                 //iterate through authenticators and build authenticators list
                 Iterator<OMElement> authenticators = scimAuthElement.getChildrenWithName(new QName(
                         SCIMProviderConstants.ELEMENT_NAME_AUTHENTICATOR));
-                List<SCIMAuthenticationHandler> SCIMAuthHandlers = new ArrayList<SCIMAuthenticationHandler>();
+                List<EntitlementAuthenticationHandler> SCIMAuthHandlers = new ArrayList<EntitlementAuthenticationHandler>();
                 if (authenticators != null) {
                     while (authenticators.hasNext()) {
                         OMElement authenticatorElement = authenticators.next();
@@ -58,7 +58,7 @@ public class SCIMAuthConfigReader {
                                 SCIMProviderConstants.ATTRIBUTE_NAME_CLASS));
                         //initialize the authenticatorElement
                         Class authenticatorClass = Class.forName(authenticatorClassName);
-                        SCIMAuthenticationHandler authHandler = (SCIMAuthenticationHandler)
+                        EntitlementAuthenticationHandler authHandler = (EntitlementAuthenticationHandler)
                                 authenticatorClass.newInstance();
 
                         //read the properties in the authenticator element and set them in the authenticator.

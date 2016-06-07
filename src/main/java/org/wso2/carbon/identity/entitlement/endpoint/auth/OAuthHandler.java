@@ -43,7 +43,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class OAuthHandler implements SCIMAuthenticationHandler {
+public class OAuthHandler implements EntitlementAuthenticationHandler {
 
     private static Log log = LogFactory.getLog(BasicAuthHandler.class);
     /* constants specific to this authenticator */

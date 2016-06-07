@@ -26,7 +26,7 @@ import org.apache.cxf.message.Message;
 import org.wso2.carbon.context.PrivilegedCarbonContext;
 import org.wso2.carbon.identity.application.common.model.ThreadLocalProvisioningServiceProvider;
 import org.wso2.carbon.identity.application.common.util.IdentityApplicationManagementUtil;
-import org.wso2.carbon.identity.entitlement.endpoint.util.SCIMProviderConstants;
+import org.wso2.carbon.identity.entitlement.endpoint.util.EntitlementEndpointConstants;
 import org.wso2.carbon.identity.provisioning.IdentityProvisioningConstants;
 import org.wso2.carbon.user.api.UserRealm;
 import org.wso2.carbon.user.api.UserStoreException;
@@ -34,7 +34,6 @@ import org.wso2.carbon.user.core.service.RealmService;
 import org.wso2.carbon.utils.multitenancy.MultitenantUtils;
 import org.wso2.charon.core.exceptions.InternalServerException;
 import org.wso2.charon.core.exceptions.UnauthorizedException;
-import org.wso2.charon.core.schema.SCIMConstants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,9 +41,10 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * This is the default BASIC-Auth authentication handler for SCIM REST Endpoints.
+ * This is the default BASIC-Auth authentication handler for Entitlement REST Endpoints.
+ * Derived from BasicAuthHandler for SCIM REST Endpoints
  */
-public class BasicAuthHandler implements SCIMAuthenticationHandler {
+public class BasicAuthHandler implements EntitlementAuthenticationHandler {
 
     private static Log log = LogFactory.getLog(BasicAuthHandler.class);
     /* constants specific to this authenticator */
@@ -79,7 +79,7 @@ public class BasicAuthHandler implements SCIMAuthenticationHandler {
         Map protocolHeaders = (TreeMap) message.get(Message.PROTOCOL_HEADERS);
         // get the value for Authorization Header
         List authzHeaders = (ArrayList) protocolHeaders
-                .get(SCIMConstants.AUTHORIZATION_HEADER);
+                .get(EntitlementEndpointConstants.AUTHORIZATION_HEADER);
         if (authzHeaders != null) {
             // get the authorization header value, if provided
             String authzHeader = (String) authzHeaders.get(0);
@@ -97,7 +97,7 @@ public class BasicAuthHandler implements SCIMAuthenticationHandler {
         Map protocolHeaders = (TreeMap) message.get(Message.PROTOCOL_HEADERS);
         // get the value for Authorization Header
         List authzHeaders = (ArrayList) protocolHeaders
-                .get(SCIMConstants.AUTHORIZATION_HEADER);
+                .get(EntitlementEndpointConstants.AUTHORIZATION_HEADER);
         if (authzHeaders != null) {
             // get the authorization header value, if provided
             String authzHeader = (String) authzHeaders.get(0);
@@ -133,7 +133,7 @@ public class BasicAuthHandler implements SCIMAuthenticationHandler {
                             serviceProvider
                                     .setServiceProviderName(IdentityProvisioningConstants.LOCAL_SP);
                             serviceProvider
-                                    .setClaimDialect(SCIMProviderConstants.DEFAULT_SCIM_DIALECT);
+                                    .setClaimDialect(EntitlementEndpointConstants.DEFAULT_SCIM_DIALECT);
                             serviceProvider.setTenantDomain(MultitenantUtils.getTenantDomain(userName));
 
                             IdentityApplicationManagementUtil
@@ -193,10 +193,10 @@ public class BasicAuthHandler implements SCIMAuthenticationHandler {
     public void setProperties(Map<String, String> authenticatorProperties) {
         // set the priority read from config
         this.properties = authenticatorProperties;
-        String priorityString = properties.get(SCIMProviderConstants.PROPERTY_NAME_PRIORITY);
+        String priorityString = properties.get(EntitlementEndpointConstants.PROPERTY_NAME_PRIORITY);
         if (priorityString != null) {
             priority = Integer.parseInt(properties
-                    .get(SCIMProviderConstants.PROPERTY_NAME_PRIORITY));
+                    .get(EntitlementEndpointConstants.PROPERTY_NAME_PRIORITY));
         } else {
             priority = DEFAULT_PRIORITY;
         }

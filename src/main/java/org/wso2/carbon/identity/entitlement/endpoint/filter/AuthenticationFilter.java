@@ -26,8 +26,8 @@ import org.apache.cxf.jaxrs.model.ClassResourceInfo;
 import org.apache.cxf.jaxrs.model.OperationResourceInfo;
 import org.apache.cxf.message.Message;
 import org.wso2.carbon.identity.application.common.util.IdentityApplicationManagementUtil;
-import org.wso2.carbon.identity.entitlement.endpoint.auth.SCIMAuthenticationHandler;
-import org.wso2.carbon.identity.entitlement.endpoint.auth.SCIMAuthenticatorRegistry;
+import org.wso2.carbon.identity.entitlement.endpoint.auth.EntitlementAuthenticationHandler;
+import org.wso2.carbon.identity.entitlement.endpoint.auth.EntitlementAuthenticatorRegistry;
 import org.wso2.carbon.identity.entitlement.endpoint.util.JAXRSResponseBuilder;
 import org.wso2.charon.core.encoder.json.JSONEncoder;
 import org.wso2.charon.core.exceptions.UnauthorizedException;
@@ -48,9 +48,9 @@ public class AuthenticationFilter implements RequestHandler, ResponseHandler {
         if (log.isDebugEnabled()) {
             log.debug("Authenticating SCIM request..");
         }
-        SCIMAuthenticatorRegistry SCIMAuthRegistry = SCIMAuthenticatorRegistry.getInstance();
+        EntitlementAuthenticatorRegistry SCIMAuthRegistry = EntitlementAuthenticatorRegistry.getInstance();
         if (SCIMAuthRegistry != null) {
-            SCIMAuthenticationHandler SCIMAuthHandler = SCIMAuthRegistry.getAuthenticator(
+            EntitlementAuthenticationHandler SCIMAuthHandler = SCIMAuthRegistry.getAuthenticator(
                     message, classResourceInfo);
             boolean isAuthenticated = false;
             if (SCIMAuthHandler != null) {

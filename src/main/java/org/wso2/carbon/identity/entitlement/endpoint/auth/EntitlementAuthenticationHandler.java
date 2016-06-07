@@ -25,9 +25,10 @@ import java.util.Map;
 
 /**
  * Interface to be implemented by any type of authentication handlers that will be registered
- * to authenticate SCIM requests coming to SCIM REST endpoints.
+ * to authenticate Entitlement requests coming to Entitlement REST endpoints.
+ * Derived from SCIMAuthenticationHandler class
  */
-public interface SCIMAuthenticationHandler {
+public interface EntitlementAuthenticationHandler {
 
     /**
      * Returns the priority of the particular authentication handler implementation.

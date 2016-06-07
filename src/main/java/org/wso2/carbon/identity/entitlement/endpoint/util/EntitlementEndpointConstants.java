@@ -18,4 +18,6 @@ public class EntitlementEndpointConstants {
     public static final String AUTHENTICATION_TYPE_HEADER = "Auth_Type";
     public static final String CONTENT_TYPE_HEADER = "Content-Type";
     public static final String ACCEPT_HEADER = "Accept";
+    public static final String DEFAULT_SCIM_DIALECT = "urn:scim:schemas:core:1.0";
+    public static final String PROPERTY_NAME_PRIORITY = "Priority";
 }
