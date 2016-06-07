@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-war" name="wso2-entitlement:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="wso2-entitlement.war">
-      <element id="artifact" artifact-name="wso2-entitlement:war exploded" />
-    </root>
-  </artifact>
-</component>
