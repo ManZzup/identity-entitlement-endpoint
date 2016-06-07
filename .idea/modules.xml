@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.identity.scim.provider.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.identity.scim.provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/org.wso2.carbon.identity.entitlement.endpoint.iml" filepath="$PROJECT_DIR$/org.wso2.carbon.identity.entitlement.endpoint.iml" />
     </modules>
   </component>
 </project>

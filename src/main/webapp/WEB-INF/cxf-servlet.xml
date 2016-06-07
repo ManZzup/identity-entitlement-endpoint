@@ -36,7 +36,7 @@
 
     <!--</jaxrs:server>-->
 
-    <bean id="userBean" class="org.wso2.carbon.identity.entitlement.provider.resources.UserResource"/>
+    <bean id="userBean" class="org.wso2.carbon.identity.entitlement.endpoint.resources.UserResource"/>
 
     <jaxrs:server id="decisionResource" address="/Decision">
         <jaxrs:serviceBeans>
@@ -50,7 +50,7 @@
 
     </jaxrs:server>
 
-    <bean id="decisionBean" class="org.wso2.carbon.identity.entitlement.provider.resources.DecisionResource"/>
+    <bean id="decisionBean" class="org.wso2.carbon.identity.entitlement.endpoint.resources.DecisionResource"/>
 
     <!--<jaxrs:server id="groupResource" address="/Groups">-->
         <!--<jaxrs:serviceBeans>-->
@@ -62,7 +62,7 @@
         <!--</jaxrs:providers>-->
     <!--</jaxrs:server>-->
 
-    <!--<bean id="groupBean" class="org.wso2.carbon.identity.scim.provider.resources.GroupResource"/>-->
+    <!--<bean id="groupBean" class="org.wso2.carbon.identity.scim.endpoint.resources.GroupResource"/>-->
 
     <!--<jaxrs:server id="bulkResource" address="/Bulk">-->
         <!--<jaxrs:serviceBeans>-->
@@ -75,17 +75,17 @@
         <!---->
     <!--</jaxrs:server>-->
 
-    <!--<bean id="bulkBean" class="org.wso2.carbon.identity.scim.provider.resources.BulkResource"/>-->
+    <!--<bean id="bulkBean" class="org.wso2.carbon.identity.scim.endpoint.resources.BulkResource"/>-->
 
-    <bean id="authenticationFilter" class="org.wso2.carbon.identity.entitlement.provider.filter.AuthenticationFilter">
+    <bean id="authenticationFilter" class="org.wso2.carbon.identity.entitlement.endpoint.filter.AuthenticationFilter">
             <!-- authorization bean properties -->
         </bean>
     <bean id="jacksonJsonProvider"
           class="com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider"/>
 
-    <!--<bean id="jacksonJsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider" />-->
+    <!--<bean id="jacksonJsonProvider" class="org.apache.cxf.jaxrs.endpoint.json.JSONProvider" />-->
 
-    <bean id="ClearThreadLocalInterceptor" class="org.wso2.carbon.identity.entitlement.provider.util.ClearThreadLocalInterceptor"/>
+    <bean id="ClearThreadLocalInterceptor" class="org.wso2.carbon.identity.entitlement.endpoint.util.ClearThreadLocalInterceptor"/>
 
     <cxf:bus>
         <cxf:inInterceptors>
