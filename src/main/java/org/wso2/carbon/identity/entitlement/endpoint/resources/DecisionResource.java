@@ -60,20 +60,15 @@ public class DecisionResource extends AbstractResource {
 
     @POST
     @Path("by-attrib")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces({ MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON })
     @Consumes({ MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON })
     public String getDecisionByAttributes(@HeaderParam(EntitlementEndpointConstants.ACCEPT_HEADER) String format,
                               @HeaderParam(EntitlementEndpointConstants.AUTHENTICATION_TYPE_HEADER) String authMechanism,
                               @HeaderParam(EntitlementEndpointConstants.AUTHORIZATION_HEADER) String authorization,
                               DecisionRequestModel request) {
-//        log.info(request.getAction());
-//        log.info(request.getResource());
-//        log.info(request.getEnvironment());
 
         EntitlementEngine entitlementEngine = EntitlementEngine.getInstance();
         try {
-//            log.info("engine output " + entitlementEngine.evaluate("admin","foo",
-//                    "read",null));
             return entitlementEngine.evaluate(request.getSubject(),request.getResource(),
                                               request.getAction(),request.getEnvironment());
         } catch (ParsingException e) {
@@ -88,7 +83,7 @@ public class DecisionResource extends AbstractResource {
 
     @POST
     @Path("by-attrib-boolean")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces({ MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON })
     @Consumes({ MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON })
     public boolean getBooleanDecision(@HeaderParam(EntitlementEndpointConstants.ACCEPT_HEADER) String format,
                                           @HeaderParam(EntitlementEndpointConstants.AUTHENTICATION_TYPE_HEADER) String authMechanism,
