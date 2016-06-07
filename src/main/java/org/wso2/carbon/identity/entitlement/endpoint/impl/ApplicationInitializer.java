@@ -24,7 +24,7 @@ import org.wso2.carbon.identity.entitlement.endpoint.auth.EntitlementAuthenticat
 import org.wso2.carbon.identity.entitlement.endpoint.auth.EntitlementAuthenticatorRegistry;
 import org.wso2.carbon.identity.entitlement.endpoint.auth.BasicAuthHandler;
 import org.wso2.carbon.identity.entitlement.endpoint.auth.OAuthHandler;
-import org.wso2.carbon.identity.entitlement.endpoint.auth.SCIMAuthConfigReader;
+import org.wso2.carbon.identity.entitlement.endpoint.auth.EntitlementAuthConfigReader;
 import org.wso2.charon.core.exceptions.CharonException;
 
 import javax.servlet.ServletContextEvent;
@@ -45,7 +45,7 @@ public class ApplicationInitializer implements ServletContextListener {
         }
         try {
             //Initialize Authentication Registry
-            initSCIMAuthenticatorRegistry();
+            initEntitlementAuthenticatorRegistry();
 
             //initialize identity scim manager
             IdentitySCIMManager.getInstance();
@@ -61,15 +61,15 @@ public class ApplicationInitializer implements ServletContextListener {
         // Do nothing
     }
 
-    private void initSCIMAuthenticatorRegistry() {
+    private void initEntitlementAuthenticatorRegistry() {
         EntitlementAuthenticatorRegistry entitlementAuthRegistry = EntitlementAuthenticatorRegistry.getInstance();
         if (entitlementAuthRegistry != null) {
             //set authenticators after building auth config
-            SCIMAuthConfigReader configReader = new SCIMAuthConfigReader();
+            EntitlementAuthConfigReader configReader = new EntitlementAuthConfigReader();
             List<EntitlementAuthenticationHandler> SCIMAuthenticators = configReader.buildSCIMAuthenticators();
             if (SCIMAuthenticators != null && !SCIMAuthenticators.isEmpty()) {
-                for (EntitlementAuthenticationHandler scimAuthenticator : SCIMAuthenticators) {
-                    entitlementAuthRegistry.setAuthenticator(scimAuthenticator);
+                for (EntitlementAuthenticationHandler entitlementAuthenticator : SCIMAuthenticators) {
+                    entitlementAuthRegistry.setAuthenticator(entitlementAuthenticator);
                 }
 
             } else {
