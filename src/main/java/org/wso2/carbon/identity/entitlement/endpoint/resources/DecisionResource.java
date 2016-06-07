@@ -23,6 +23,7 @@ import org.apache.commons.logging.LogFactory;
 import org.wso2.balana.ParsingException;
 import org.wso2.carbon.identity.entitlement.EntitlementException;
 import org.wso2.carbon.identity.entitlement.dto.EntitledResultSetDTO;
+import org.wso2.carbon.identity.entitlement.endpoint.resources.models.*;
 import org.wso2.carbon.identity.entitlement.pdp.EntitlementEngine;
 import org.wso2.carbon.identity.entitlement.policy.search.PolicySearch;
 import org.wso2.carbon.identity.entitlement.endpoint.util.EntitlementEndpointConstants;
@@ -64,7 +65,7 @@ public class DecisionResource extends AbstractResource {
     public String getDecisionByAttributes(@HeaderParam(EntitlementEndpointConstants.ACCEPT_HEADER) String format,
                               @HeaderParam(EntitlementEndpointConstants.AUTHENTICATION_TYPE_HEADER) String authMechanism,
                               @HeaderParam(EntitlementEndpointConstants.AUTHORIZATION_HEADER) String authorization,
-                              RequestModel request) {
+                              DecisionRequestModel request) {
 //        log.info(request.getAction());
 //        log.info(request.getResource());
 //        log.info(request.getEnvironment());
@@ -92,7 +93,7 @@ public class DecisionResource extends AbstractResource {
     public boolean getBooleanDecision(@HeaderParam(EntitlementEndpointConstants.ACCEPT_HEADER) String format,
                                           @HeaderParam(EntitlementEndpointConstants.AUTHENTICATION_TYPE_HEADER) String authMechanism,
                                           @HeaderParam(EntitlementEndpointConstants.AUTHORIZATION_HEADER) String authorization,
-                                          RequestModel request) {
+                                          DecisionRequestModel request) {
 
         EntitlementEngine entitlementEngine = EntitlementEngine.getInstance();
         try {
@@ -117,9 +118,9 @@ public class DecisionResource extends AbstractResource {
     @Produces({ MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON })
     @Consumes({ MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON })
     public EntitledAttributesResponseModel getEntitledAttributes(@HeaderParam(EntitlementEndpointConstants.ACCEPT_HEADER) String format,
-                                                      @HeaderParam(EntitlementEndpointConstants.AUTHENTICATION_TYPE_HEADER) String authMechanism,
-                                                      @HeaderParam(EntitlementEndpointConstants.AUTHORIZATION_HEADER) String authorization,
-                                                      EntitledAttributesRequestModel request) {
+                                                                 @HeaderParam(EntitlementEndpointConstants.AUTHENTICATION_TYPE_HEADER) String authMechanism,
+                                                                 @HeaderParam(EntitlementEndpointConstants.AUTHORIZATION_HEADER) String authorization,
+                                                                 EntitledAttributesRequestModel request) {
 
         if (request.getSubjectName() == null) {
             log.error("Invalid input data - either the user name or role name should be non-null");
@@ -146,9 +147,9 @@ public class DecisionResource extends AbstractResource {
     @Produces({ MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON })
     @Consumes({ MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON })
     public AllEntitlementsResponseModel getAllEntitlements(@HeaderParam(EntitlementEndpointConstants.ACCEPT_HEADER) String format,
-                                                              @HeaderParam(EntitlementEndpointConstants.AUTHENTICATION_TYPE_HEADER) String authMechanism,
-                                                              @HeaderParam(EntitlementEndpointConstants.AUTHORIZATION_HEADER) String authorization,
-                                                              AllEntitlementsRequestModel request) {
+                                                           @HeaderParam(EntitlementEndpointConstants.AUTHENTICATION_TYPE_HEADER) String authMechanism,
+                                                           @HeaderParam(EntitlementEndpointConstants.AUTHORIZATION_HEADER) String authorization,
+                                                           AllEntitlementsRequestModel request) {
 
         log.info(request.getGivenAttributes()[0].getAttributeId());
         log.info(request.getGivenAttributes()[0].getAttributeDataType());

@@ -41,7 +41,7 @@ public class ApplicationInitializer implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         if (logger.isDebugEnabled()) {
-            logger.debug("Initializing SCIM Webapp...");
+            logger.debug("Initializing Entitlement Webapp...");
         }
         try {
             //Initialize Authentication Registry

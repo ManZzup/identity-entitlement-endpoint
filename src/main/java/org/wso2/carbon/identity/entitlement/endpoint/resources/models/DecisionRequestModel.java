@@ -1,4 +1,4 @@
-package org.wso2.carbon.identity.entitlement.endpoint.resources;
+package org.wso2.carbon.identity.entitlement.endpoint.resources.models;
 
 import javax.xml.bind.annotation.*;
 
@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.*;
         "environment"
 })
 @XmlRootElement(name="DecisionRequest")
-public class RequestModel {
+public class DecisionRequestModel {
     @XmlElement(required = false)
     private String subject;
     @XmlElement(required = false)

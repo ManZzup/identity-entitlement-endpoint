@@ -1,4 +1,4 @@
-package org.wso2.carbon.identity.entitlement.endpoint.resources;
+package org.wso2.carbon.identity.entitlement.endpoint.resources.models;
 
 import javax.xml.bind.annotation.*;
 

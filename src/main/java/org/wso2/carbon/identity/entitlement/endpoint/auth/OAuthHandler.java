@@ -29,14 +29,13 @@ import org.wso2.carbon.context.PrivilegedCarbonContext;
 import org.wso2.carbon.identity.application.common.model.ProvisioningServiceProviderType;
 import org.wso2.carbon.identity.application.common.model.ThreadLocalProvisioningServiceProvider;
 import org.wso2.carbon.identity.application.common.util.IdentityApplicationManagementUtil;
-import org.wso2.carbon.identity.entitlement.endpoint.util.SCIMProviderConstants;
+import org.wso2.carbon.identity.entitlement.endpoint.util.EntitlementEndpointConstants;
 import org.wso2.carbon.identity.oauth2.OAuth2TokenValidationService;
 import org.wso2.carbon.identity.oauth2.dto.OAuth2ClientApplicationDTO;
 import org.wso2.carbon.identity.oauth2.dto.OAuth2TokenValidationRequestDTO;
 import org.wso2.carbon.identity.oauth2.dto.OAuth2TokenValidationResponseDTO;
 import org.wso2.carbon.user.core.service.RealmService;
 import org.wso2.carbon.utils.multitenancy.MultitenantUtils;
-import org.wso2.charon.core.schema.SCIMConstants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +83,7 @@ public class OAuthHandler implements EntitlementAuthenticationHandler {
         Map protocolHeaders = (TreeMap) message.get(Message.PROTOCOL_HEADERS);
         // get the value for Authorization Header
         List authzHeaders = (ArrayList) protocolHeaders
-                .get(SCIMConstants.AUTHORIZATION_HEADER);
+                .get(EntitlementEndpointConstants.AUTHORIZATION_HEADER);
         if (authzHeaders != null) {
             // get the authorization header value, if provided
             String authzHeader = (String) authzHeaders.get(0);
@@ -100,7 +99,7 @@ public class OAuthHandler implements EntitlementAuthenticationHandler {
         Map protocolHeaders = (TreeMap) message.get(Message.PROTOCOL_HEADERS);
         // get the value for Authorization Header
         List authzHeaders = (ArrayList) protocolHeaders
-                .get(SCIMConstants.AUTHORIZATION_HEADER);
+                .get(EntitlementEndpointConstants.AUTHORIZATION_HEADER);
         if (authzHeaders != null) {
             // get the authorization header value, if provided
             String authzHeader = (String) authzHeaders.get(0);
@@ -127,7 +126,7 @@ public class OAuthHandler implements EntitlementAuthenticationHandler {
                     serviceProvider.setServiceProviderName(validationApp.getConsumerKey());
                     serviceProvider
                             .setServiceProviderType(ProvisioningServiceProviderType.OAUTH);
-                    serviceProvider.setClaimDialect(SCIMProviderConstants.DEFAULT_SCIM_DIALECT);
+                    serviceProvider.setClaimDialect(EntitlementEndpointConstants.DEFAULT_SCIM_DIALECT);
                     serviceProvider.setTenantDomain(MultitenantUtils.getTenantDomain(userName));
                     IdentityApplicationManagementUtil
                             .setThreadLocalProvisioningServiceProvider(serviceProvider);
@@ -154,20 +153,20 @@ public class OAuthHandler implements EntitlementAuthenticationHandler {
      */
     public void setProperties(Map<String, String> authenticatorProperties) {
         this.properties = authenticatorProperties;
-        String priorityString = properties.get(SCIMProviderConstants.PROPERTY_NAME_PRIORITY);
+        String priorityString = properties.get(EntitlementEndpointConstants.PROPERTY_NAME_PRIORITY);
         if (priorityString != null) {
             priority = Integer.parseInt(priorityString);
         } else {
             priority = DEFAULT_PRIORITY;
         }
-        String remoteURLString = properties.get(SCIMProviderConstants.PROPERTY_NAME_AUTH_SERVER);
+        String remoteURLString = properties.get(EntitlementEndpointConstants.PROPERTY_NAME_AUTH_SERVER);
         if (remoteURLString != null) {
             remoteServiceURL = remoteURLString;
         } else {
             remoteServiceURL = LOCAL_AUTH_SERVER;
         }
-        userName = properties.get(SCIMProviderConstants.PROPERTY_NAME_USERNAME);
-        password = properties.get(SCIMProviderConstants.PROPERTY_NAME_PASSWORD);
+        userName = properties.get(EntitlementEndpointConstants.PROPERTY_NAME_USERNAME);
+        password = properties.get(EntitlementEndpointConstants.PROPERTY_NAME_PASSWORD);
     }
 
     private String getOAuthAuthzServerURL() {
