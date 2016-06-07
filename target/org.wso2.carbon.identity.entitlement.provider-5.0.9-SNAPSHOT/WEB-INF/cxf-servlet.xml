@@ -25,19 +25,6 @@
          http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
          http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd">
 
-    <!--<jaxrs:server id="userResource" address="/Users">-->
-        <!--<jaxrs:serviceBeans>-->
-            <!--<ref bean="userBean"/>-->
-        <!--</jaxrs:serviceBeans>-->
-
-        <!--<jaxrs:providers>-->
-            <!--<ref bean="authenticationFilter"/>-->
-        <!--</jaxrs:providers>-->
-
-    <!--</jaxrs:server>-->
-
-    <bean id="userBean" class="org.wso2.carbon.identity.entitlement.provider.resources.UserResource"/>
-
     <jaxrs:server id="decisionResource" address="/Decision">
         <jaxrs:serviceBeans>
             <ref bean="decisionBean"/>
@@ -50,42 +37,17 @@
 
     </jaxrs:server>
 
-    <bean id="decisionBean" class="org.wso2.carbon.identity.entitlement.provider.resources.DecisionResource"/>
+    <bean id="decisionBean" class="org.wso2.carbon.identity.entitlement.endpoint.resources.DecisionResource"/>
 
-    <!--<jaxrs:server id="groupResource" address="/Groups">-->
-        <!--<jaxrs:serviceBeans>-->
-            <!--<ref bean="groupBean"/>-->
-        <!--</jaxrs:serviceBeans>-->
-
-        <!--<jaxrs:providers>-->
-            <!--<ref bean="authenticationFilter"/>-->
-        <!--</jaxrs:providers>-->
-    <!--</jaxrs:server>-->
-
-    <!--<bean id="groupBean" class="org.wso2.carbon.identity.scim.provider.resources.GroupResource"/>-->
-
-    <!--<jaxrs:server id="bulkResource" address="/Bulk">-->
-        <!--<jaxrs:serviceBeans>-->
-            <!--<ref bean="bulkBean"/>-->
-        <!--</jaxrs:serviceBeans>-->
-
-        <!--<jaxrs:providers>-->
-            <!--<ref bean="authenticationFilter"/>-->
-        <!--</jaxrs:providers>-->
-        <!---->
-    <!--</jaxrs:server>-->
-
-    <!--<bean id="bulkBean" class="org.wso2.carbon.identity.scim.provider.resources.BulkResource"/>-->
-
-    <bean id="authenticationFilter" class="org.wso2.carbon.identity.entitlement.provider.filter.AuthenticationFilter">
+    <bean id="authenticationFilter" class="org.wso2.carbon.identity.entitlement.endpoint.filter.AuthenticationFilter">
             <!-- authorization bean properties -->
         </bean>
     <bean id="jacksonJsonProvider"
           class="com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider"/>
 
-    <!--<bean id="jacksonJsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider" />-->
+    <!--<bean id="jacksonJsonProvider" class="org.apache.cxf.jaxrs.endpoint.json.JSONProvider" />-->
 
-    <bean id="ClearThreadLocalInterceptor" class="org.wso2.carbon.identity.entitlement.provider.util.ClearThreadLocalInterceptor"/>
+    <bean id="ClearThreadLocalInterceptor" class="org.wso2.carbon.identity.entitlement.endpoint.util.ClearThreadLocalInterceptor"/>
 
     <cxf:bus>
         <cxf:inInterceptors>

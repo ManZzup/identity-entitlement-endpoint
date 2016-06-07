@@ -69,7 +69,7 @@
     </security-constraint>
 
     <listener>
-        <listener-class>org.wso2.carbon.identity.entitlement.provider.impl.ApplicationInitializer</listener-class>
+        <listener-class>org.wso2.carbon.identity.entitlement.endpoint.impl.ApplicationInitializer</listener-class>
     </listener>
 
     <!--login-config>

@@ -2,15 +2,69 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="org.wso2.carbon.identity.scim.provider:war" />
+      <artifact name="org.wso2.carbon.identity.entitlement.endpoint:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8514f4-2a22-47d6-a5db-4724555c1bce" name="Default" comment="Refactoring phase 1">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/resources/BulkResource.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/resources/GroupResource.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/resources/UserResource.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/org_wso2_carbon_identity_scim_provider_war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/EntitlementConstants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/auth/BasicAuthHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/auth/OAuthHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/auth/OAuthServiceClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/auth/SCIMAuthConfigReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/auth/SCIMAuthenticationHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/auth/SCIMAuthenticatorRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/filter/AuthenticationFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/impl/ApplicationInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/impl/IdentitySCIMManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/impl/ProvisioningEntityBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/impl/SCIMUserManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/resources/AbstractResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/resources/AllEntitlementsRequestModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/resources/AllEntitlementsResponseModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/resources/DecisionResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/resources/EntitledAttributesRequestModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/resources/EntitledAttributesResponseModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/resources/RequestModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/resources/UserResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/util/ClearThreadLocalInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/util/JAXRSResponseBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/wso2/carbon/identity/entitlement/provider/util/SCIMProviderConstants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/EntitlementConstants.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/auth/BasicAuthHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/auth/OAuthHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/auth/OAuthServiceClient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/auth/SCIMAuthConfigReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/auth/SCIMAuthenticationHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/auth/SCIMAuthenticatorRegistry.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/filter/AuthenticationFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/impl/ApplicationInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/impl/IdentitySCIMManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/impl/ProvisioningEntityBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/impl/SCIMUserManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/resources/AbstractResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/resources/AllEntitlementsRequestModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/resources/AllEntitlementsResponseModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/resources/DecisionResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/resources/EntitledAttributesRequestModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/resources/EntitledAttributesResponseModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/resources/RequestModel.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/resources/UserResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/util/ClearThreadLocalInterceptor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/util/JAXRSResponseBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/org/wso2/carbon/identity/entitlement/provider/util/SCIMProviderConstants.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/wso2-entitlement.war" afterPath="$PROJECT_DIR$/target/wso2-entitlement.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/org_wso2_carbon_identity_entitlement_endpoint_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/org_wso2_carbon_identity_entitlement_endpoint_war.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org.wso2.carbon.identity.entitlement.endpoint.iml" afterPath="$PROJECT_DIR$/org.wso2.carbon.identity.entitlement.endpoint.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/target/classes/META-INF/DEPENDENCIES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-shared-archive-resources/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/target/maven-shared-archive-resources/META-INF/DEPENDENCIES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/classes/META-INF/DEPENDENCIES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/cxf-servlet.xml" afterPath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/cxf-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/target/test-classes/META-INF/DEPENDENCIES" />
     </list>
     <ignored path="org.wso2.carbon.identity.scim.provider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+            <state relative-caret-position="227">
+              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -73,16 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicAuthHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/auth/BasicAuthHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SCIMAuthConfigReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/auth/SCIMAuthConfigReader.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,8 +143,38 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="254">
+              <caret line="137" column="40" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="org.wso2.carbon.identity.entitlement.endpoint.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/org.wso2.carbon.identity.entitlement.endpoint.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="org_wso2_carbon_identity_entitlement_endpoint_war_exploded.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/artifacts/org_wso2_carbon_identity_entitlement_endpoint_war_exploded.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="org_wso2_carbon_identity_entitlement_endpoint_war.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/artifacts/org_wso2_carbon_identity_entitlement_endpoint_war.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -159,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/provider/auth/SCIMAuthConfigReader.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/cxf-servlet.xml" />
+        <option value="$PROJECT_DIR$/.idea/artifacts/org_wso2_carbon_identity_entitlement_endpoint_war.xml" />
       </list>
     </option>
   </component>
@@ -276,6 +351,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -470,11 +549,11 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../identity-inbound-provisioning-scim" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.25454545" />
+    <property name="project.structure.side.proportion" value="0.41609195" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -1103,12 +1182,12 @@
       <workItem from="1464748403451" duration="1102000" />
       <workItem from="1464976120102" duration="2352000" />
       <workItem from="1465182403481" duration="946000" />
-      <workItem from="1465263819002" duration="1286000" />
+      <workItem from="1465263819002" duration="2562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43117000" />
+    <option name="totallyTimeSpent" value="44393000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1295" height="744" extended-state="6" />
@@ -1116,13 +1195,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.49730977" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.49730977" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.50269026" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1135,13 +1215,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1168,20 +1247,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/resources/AbstractResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/resources/DecisionResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/resources/RequestModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1288,13 +1353,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="42" column="71" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.identity.entitlement.endpoint.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1484,14 +1542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/wso2/carbon/identity/entitlement/endpoint/util/ClearThreadLocalInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1542,8 +1592,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+        <state relative-caret-position="227">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="137" column="40" selection-start-line="137" selection-start-column="40" selection-end-line="137" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/org.wso2.carbon.identity.entitlement.endpoint.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/org_wso2_carbon_identity_entitlement_endpoint_war.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/org_wso2_carbon_identity_entitlement_endpoint_war_exploded.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1554,11 +1636,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>org.wso2.carbon.identity.entitlement.endpoint:war</last-edited>
+          <last-edited>org.wso2.carbon.identity.entitlement.endpoint:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.25454545" />
+                <option value="0.41609195" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1567,11 +1649,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring</last-edited>
+          <last-edited>Spring (org.wso2.carbon.identity.entitlement.endpoint)|Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.25454545" />
+                <option value="0.41609195" />
               </list>
             </option>
           </splitter-proportions>
@@ -1582,7 +1664,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.25454545" />
               </list>
             </option>
           </splitter-proportions>
@@ -1594,7 +1676,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.25454545" />
               </list>
             </option>
           </splitter-proportions>
@@ -1606,7 +1688,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.25454545" />
+                <option value="0.41609195" />
                 <option value="0.6" />
               </list>
             </option>
@@ -1631,7 +1713,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.25454545" />
+                <option value="0.41609195" />
               </list>
             </option>
           </splitter-proportions>

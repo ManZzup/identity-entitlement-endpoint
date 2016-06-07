@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="org.wso2.carbon.identity.entitlement.endpoint:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="root">
-      <element id="artifact" artifact-name="org.wso2.carbon.identity.scim.provider:war exploded" />
+    <root id="archive" name="org.wso2.carbon.identity.entitlement.provider-5.0.9-SNAPSHOT.war">
+      <element id="artifact" artifact-name="org.wso2.carbon.identity.entitlement.endpoint:war exploded" />
     </root>
   </artifact>
 </component>
