@@ -13,7 +13,8 @@ Procedure
 3. You can hot deploy the war file as well
 4. Once deployed the WADL definitions for the service can be seen at, **https://localhost:9443/wso2-entitlement/entitlement/Decision?_wadl**
 5. The service curently support both JSON and XML
-6. TO test various service methods, use the curl requests and json/xml request definitions available under resources/curlTests
+6. TO test various service methods, use the curl requests and json/xml request definitions available under **resources/curlTests**
+7. For policies please use the ones in **resources/policies** for testing given sample requests
 
 Thank you!!
 
